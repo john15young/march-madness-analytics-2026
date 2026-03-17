@@ -1,0 +1,7 @@
+# Ignore the large Kaggle datasets
+data/
+*.csv
+
+# Ignore PyCharm internal settings
+.idea/
+.ipynb_checkpoints/
