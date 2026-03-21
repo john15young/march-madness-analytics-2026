@@ -1,43 +1,37 @@
-# 🏀 2026 March Madness: Tournament Forecasting (v5.1)
+# 🏀 March Madness Predictor v5.3: March Madness Edition
 
-## 📌 Project Overview
-This project leverages a sophisticated machine learning ensemble to forecast win probabilities for the 2026 NCAA Division I Men's Basketball Tournament. By balancing raw offensive efficiency with historical seeding trends, this model identifies high-value upset opportunities while maintaining a grounded "Power Conference" perspective.
-
----
-
-## 🧠 Methodology & Model Design: The "Power Blend"
-The engine is built on a **Logistic Regression (Logit) Framework** using a **50/50 Dual-Engine Blend**. Unlike traditional models that rely solely on season averages, v5.1 weights historical seed performance equally against current-season stats to neutralize "Mid-Major Bias."
-
-### 📊 Feature Engineering & Differential Logic
-The model utilizes a **Differential Feature Set** processed through a `StandardScaler` pipeline to ensure all variables are weighted correctly regardless of their raw scale.
-
-| Feature | Logic | Strategic Reasoning |
-| :--- | :--- | :--- |
-| **ScoreDiff** | PPG A - PPG B | Measures absolute scoring dominance. |
-| **FGM_Diff** | FGM A - FGM B | Proxy for shot creation and offensive volume. |
-| **Ast_Diff** | Ast A - Ast B | Measures ball movement and offensive chemistry. |
-| **SeedDiff** | Seed A - Seed B | The primary anchor for Strength of Schedule (SOS). |
+### 🏆 Tournament Performance Dashboard
+* **Round of 64 Accuracy:** **78.12%** (25/32 Games Correct)
+* **Current Status:** Optimized for the Round of 32
+* **Strategy:** Hybrid Power Blend (50% Statistical Efficiency / 50% Seed Logic)
 
 ---
 
-## 🚀 Strength of Schedule (SOS) & Array-Based Scaling
-To solve the **Mid-Major Paradox** (inflated stats against weaker schedules), I implemented two critical technical overrides:
+### 🛠️ Latest Architectural Updates (v5.3)
 
-1. **The 7.5% SOS Adjustment:** A manual probability shift applied when Elite Seeds (1-6) face high-stat Mid-Majors (11-15). This accounts for the increased difficulty of Power 5 conference play that often deflates the raw stats of top-tier programs like **Tennessee** and **Texas Tech**.
-2. **NumPy Array Pipeline:** To resolve `Scikit-Learn` feature-name warnings and "50% Flatline" errors, the prediction engine was migrated to a raw NumPy array input format. This ensures the `StandardScaler` applies normalization with 100% mathematical consistency.
+To move beyond basic win/loss predictions, I’ve "hardened" the model’s logic to better account for elite defensive playstyles and verified tournament performance.
+
+* **💎 Elite Seed Protection**
+  Implemented a logic override to protect 1 and 2-seeds against high-variance double-digit seeds. This ensures the talent gap between the nation's top programs and tournament underdogs is statistically respected.
+
+* **📈 Seed Weight Recalibration (The "Respect Factor")**
+  Increased the Seed Difference multiplier from **0.05 → 0.07**. This provides higher seeds a stronger mathematical buffer (e.g., a 4-seed gap now provides a **28%** advantage instead of **20%**), preventing the model from being skewed by lower seeds with inflated stats against weaker schedules.
+
+* **🛡️ Defensive Efficiency Factor**
+  Integrated **Opponent Points Allowed (OppScore)**. The model now rewards defenses that hold opponents under 65 PPG, recognizing that defensive consistency is a high-probability indicator of tournament advancement.
+
+* **🏅 Historical Performance Adjustment**
+  Added a 3% statistical weight for programs with consistent multi-year tournament success. This accounts for institutional experience and coaching adjustments that raw regular-season box scores often miss.
 
 ---
 
-## 📉 Performance Validation
-As of the conclusion of the **2026 Round of 64**:
+### 🚀 Technical Implementation
 
-* **Final Accuracy Rate:** **81.25%** (26 Correct / 32 Games).
-* **Key Successes:** Successfully corrected the **Tennessee vs. Miami OH** and **Texas Tech vs. Akron** projections, which were previously "stat-traps" for the model.
-* **Confidence Calibration:** By implementing a 95% probability cap and a 50/50 blend, the model provides realistic "human-readable" percentages rather than binary 100% certainties.
+1. **Data Prep (`Cell 1`):** Calculates season-long offensive and defensive metrics (eFG%, PPS, OppScore).
+2. **Model Training (`Cell 2`):** Trains the Gradient Boosting model on raw arrays for maximum precision.
+3. **Execution (`Cell 3`):** Uses the `predict_game_v5` function to run the updated R32 matchups.
 
 ---
 
-## 🛠️ Technologies Used
-* **Python 3.14**
-* **Pandas & NumPy:** Data manipulation and matrix-based feature calculations.
-* **Scikit-Learn:** Logistic Regression and `StandardScaler` for statistical normalization.
+### 📊 Round of 32 Outlook
+As the tournament progresses, the model shifts focus from high-volume scoring to efficiency and seed-based probability. The v5.3 update produces more grounded win probabilities for the second weekend by prioritizing defensive metrics and reducing the impact of regular-season statistical outliers.
