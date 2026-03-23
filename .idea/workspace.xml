@@ -4,7 +4,6 @@
     <list default="true" id="728ff224-95d6-4f88-bffa-b9c0d339cfa9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/March_Madness_Predictor_2026.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/March_Madness_Predictor_2026.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,7 @@
     &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/johnyoung/March-Madness-Predictor-2026/data&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -69,7 +69,10 @@
       <workItem from="1773707864429" duration="3438000" />
       <workItem from="1774100243947" duration="3103000" />
       <workItem from="1774107771530" duration="737000" />
-      <workItem from="1774111062472" duration="4417000" />
+      <workItem from="1774111062472" duration="4588000" />
+      <workItem from="1774228819010" duration="47000" />
+      <workItem from="1774229080929" duration="307000" />
+      <workItem from="1774299697040" duration="2963000" />
     </task>
     <servers />
   </component>
