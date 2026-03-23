@@ -1,4 +1,7 @@
-# 🏀 March Madness Predictor v5.3: March Madness Edition
+# 🏀 March Madness Predictor v5.3: The "Hardened Logic" Edition
+
+### **Overview**
+The March Madness Predictor v5.3 is a high-precision forecasting engine designed to navigate the high-variance environment of the NCAA Tournament. Rather than relying on simple season averages, this model was trained on a comprehensive dataset spanning **14 seasons of tournament history (2010–2024)**. By analyzing over 900 high-stakes games, the model identifies "statistical cliffs" where lower seeds typically fail and identifies the elite defensive traits required for deep runs. The "hardened" logic prioritizes **Defensive Efficiency (OppScore)** and **Institutional Experience**, ensuring that predictions are grounded in the proven traits that actually translate to tournament advancement.
 
 ### 🏆 Tournament Performance Dashboard
 * **Round of 64 Accuracy:** **78.12%** (25/32 Games Correct)
