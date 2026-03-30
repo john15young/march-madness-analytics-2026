@@ -4,6 +4,7 @@
     <list default="true" id="728ff224-95d6-4f88-bffa-b9c0d339cfa9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/March_Madness_Predictor_2026.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/March_Madness_Predictor_2026.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,11 @@
       <workItem from="1774111062472" duration="4588000" />
       <workItem from="1774228819010" duration="47000" />
       <workItem from="1774229080929" duration="307000" />
-      <workItem from="1774299697040" duration="2963000" />
+      <workItem from="1774299697040" duration="3061000" />
+      <workItem from="1774307147536" duration="17000" />
+      <workItem from="1774706196765" duration="890000" />
+      <workItem from="1774721598725" duration="16000" />
+      <workItem from="1774887504708" duration="2190000" />
     </task>
     <servers />
   </component>
