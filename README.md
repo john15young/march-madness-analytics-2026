@@ -1,46 +1,43 @@
-# 🏀 2026 March Madness Forecaster: The "Hardened Logic" Engine
+# 🏀 2026 March Madness Forecaster: Strategic Win-Probability Engine
 
 ### **Overview**
-The **2026 Hardened Logic Engine** is a high-precision forecasting model built to navigate the high-variance environment of the NCAA Tournament. Rather than relying on simple win/loss records, this model analyzes **mechanical efficiency**—identifying the specific statistical "cliffs" where lower seeds typically fail and the elite defensive traits required for deep championship runs.
+The **2026 Strategic Win-Probability Engine** is a high-precision forecasting model built to navigate the high-variance environment of the NCAA Tournament. Rather than relying on simple win/loss records, this model analyzes **mechanical efficiency**—identifying the statistical thresholds where lower seeds typically fail and the elite defensive traits required for deep championship runs.
 
----
-
-### 📊 2026 Tournament Performance Dashboard
+### 📊 **2026 Tournament Performance Dashboard**
 The model's accuracy has remained remarkably stable as the field narrows and the competition level rises.
-
-* **Round of 64 Accuracy:** **78.12%** (25/32 Games Correct)
-* **Elite 8 Accuracy:** **100%** (4/4 Games Correct)
+* **Round of 64 Accuracy:** 78.12% (25/32 Games Correct)
+* **Elite 8 Accuracy:** 100% (4/4 Games Correct)
 * **Current Status:** Optimized for the Final Four
-* **Strategy Note:** Successfully predicted Arizona (1) over Purdue (2) by using a manual override to prioritize **Transition Speed** and **Recent Tournament Dominance** over interior efficiency.
+* **Key Insight:** Successfully predicted Arizona (1) over Purdue (2) by using a manual override to prioritize **Transition Speed** and **Recent Tournament Dominance** over interior efficiency.
 
 ---
 
-### 🧠 The Four Pillars of the Model
-The model's intelligence is derived from four core metric categories extracted and cleaned from the `MRegularSeasonDetailedResults` dataset.
+### 🧠 **The Four Pillars of the Model**
+The model's intelligence is derived from four core metric categories extracted and cleaned from historical tournament datasets.
 
 #### **1. Scoring & Shooting Efficiency**
-The model identifies how much "value" a team gets out of every single possession.
-* **eFG% (Effective Field Goal Percentage):** Calculated as `(FGM + 0.5 * FGM3) / FGA`. This recognizes that 3-point shots are 50% more valuable than 2-pointers, rewarding teams with elite spacing.
-* **PPS (Points Per Shot):** Calculated as `Score / FGA`. This identifies high-efficiency offenses that prioritize high-percentage shots over volume.
+The model identifies how much "value" a team gets out of every possession:
+* **eFG% (Effective Field Goal Percentage):** Rewards teams with elite spacing by recognizing that 3-point shots are 50% more valuable than 2-pointers.
+* **PPS (Points Per Shot):** Identifies high-efficiency offenses that prioritize high-percentage looks over volume.
 
 #### **2. Tactical Playmaking & Ball Security**
-* **Ast_Diff (Assist Differential):** The gap between a team's assists and their opponents'. High assist differentials indicate a "Motion Offense" that is harder to scout and defend in a tournament setting.
-* **FGM_Diff (Field Goals Made Differential):** Measures a team's ability to create more high-quality scoring opportunities than their opponent per game.
+* **Ast_Diff (Assist Differential):** High assist differentials indicate "Motion Offenses" that are historically harder to scout and defend in tournament settings.
+* **FGM_Diff (Field Goals Made Differential):** Measures a team's ability to create more high-quality scoring opportunities than their opponent.
 
-#### **3. The "Power Blend" (50/50 Logic)**
-To ensure the model isn't fooled by "stat-stuffers" from weaker conferences, the final probability is a balanced hybrid:
-* **50% Statistical Probability:** Derived from a **Logistic Regression** model trained on 14 years of historical tournament box scores.
-* **50% Seed Probability:** A "Respect Factor" where each seed gap provides a **7% boost** to the higher seed. This ensures that a 1-seed's season-long dominance is mathematically respected.
+#### **3. The Hybrid Probability Blend**
+To ensure the model isn't skewed by "stat-stuffers" from weaker conferences, the final output is a balanced hybrid:
+* **50% Statistical Probability:** Derived from a **Logistic Regression** model trained on 23 years of historical tournament box scores (2003–2025).
+* **50% Seed Probability:** A "Respect Factor" where each seed gap provides a **7% boost** to the higher seed, respecting season-long dominance.
 
-#### **4. Tournament-Specific Logic Overrides**
-The engine applies "Hardened" filters to account for the unique environment of the Big Dance:
-* **🛡️ The 65 PPG Defensive Wall:** A **4% bonus** is applied to teams that allow fewer than 65 Points Per Game. The model recognizes that elite defense is the highest-probability indicator of tournament advancement.
-* **🏅 Blue Blood Pedigree:** A **3% bonus** for institutional winners (e.g., UConn, Duke, Kansas). This accounts for coaching experience and "Tournament DNA" that raw regular-season box scores miss.
-* **💎 Elite Seed Protection:** An **8% safety buffer** is applied when a top-2 seed faces a double-digit seed, protecting the bracket from high-variance early-round upsets.
+#### **4. Tournament-Specific Overrides**
+The engine applies specific filters to account for the unique environment of the Big Dance:
+* 🛡️ **The 65 PPG Defensive Wall:** A **4% bonus** for teams allowing fewer than 65 PPG, recognizing elite defense as a primary indicator of advancement.
+* 🏅 **Institutional Pedigree:** A **3% bonus** for programs with deep tournament history (e.g., UConn, Duke, Kansas) to account for coaching experience.
+* 💎 **Elite Seed Protection:** An **8% safety buffer** when a top-2 seed faces a double-digit seed to protect against high-variance early-round upsets.
 
 ---
 
-### 🚀 Technical Implementation
-1.  **Data Prep:** Cleans `MNCAATourneySeeds` and aggregates winning/losing stats to calculate true **Opponent Scoring (OppScore)**.
-2.  **Model Training:** Uses `StandardScaler` to normalize features before training the Logistic Regression model on raw arrays for maximum precision.
-3.  **Execution:** The `predict_game_v5` function executes the blend and applies overrides to produce the final win probability.
+### 🚀 **Technical Implementation**
+* **Data Prep:** Cleans historical seed data and aggregates winning/losing stats to calculate true **Opponent Scoring (OppScore)**.
+* **Model Training:** Uses `StandardScaler` to normalize features before training the **Logistic Regression** model for maximum precision.
+* **Execution:** The `predict_game_v5` function executes the probability blend and applies overrides to produce the final win percentage.
